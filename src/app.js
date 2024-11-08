@@ -12,6 +12,10 @@ const router = require("./routers/route")
 app.use(express.json())
 app.use(router)
 
+app.get('/', function (req, res) {
+    res.json({ "message": "Welcome to Node and Express projects." });
+});
+
 app.listen(port, () => {
     console.log(`connection is setup at  http://localhost:${port}`)
 })
